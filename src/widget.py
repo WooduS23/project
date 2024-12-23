@@ -1,8 +1,9 @@
-from .masks import mask_card_number, mask_account_number
+from .masks import mask_account_number, mask_card_number
+
 
 def mask_account_card(input_string: str) -> str:
     """
-    Принимает на вход строку с типом карты или счета и возвращает замаскированный номер
+    Принимает на вход строку с типом карты или счета и возвращает маску.
     """
     parts = input_string.split()
     card_type = " ".join(parts[:-1])
@@ -17,7 +18,7 @@ def mask_account_card(input_string: str) -> str:
 
 def get_date(date_string: str) -> str:
     """
-    Принимает на вход строку и возвращает дату в формате 'DD.MM.YYYY'.
+    Принимает на вход строку и возвращает дату.
     """
-    year, month, day = date_string.split('-')
+    year, month, day = date_string.split("-")
     return f"{day}.{month}.{year}"
