@@ -12,3 +12,4 @@ def mask_account_number(account_number: str) -> str:
     """
     masked_account_number = f"**{account_number[-4:]}"
     return masked_account_number
+# sda
